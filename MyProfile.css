@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.main-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(0.7);
+}
+
+.main-container2 {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.main-container2 h2 {
+    margin-bottom: 20px;
+    font-size: 56px;
+}
+
+.main-container2 p {
+    font-size: 36px;
+}
+
+.main-container3 {
+    width: 100%;
+    height: calc(100vh - 150px);  /* fills screen minus header */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+}
+
+.main-container4 {
+    width: 600px;
+    max-width: 95%;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    /* text-align: center; */
+    border-radius: 20px;
+    padding: 40px 30px;
+    margin-bottom: 30px;
+}
+
+.main-container4 h2 {
+    margin-bottom: 10px;
+    font-size: 32px;
+    color: #333;
+}
+
+.main-container4 p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+/* ===== Form Styling ===== */
+#profileForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.form-column label,
+.form-group label {
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-column input,
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+}
+.form-group #bio {
+    align-items: left;
+}
+textarea {
+    resize: none;
+}
+
+.error {
+    font-size: 12px;
+    color: red;
+    margin-top: 4px;
+}
+
+/* ===== Button Styling ===== */
+
+.form-btn{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.button-common {
+    padding: 12px 20px;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-left: 10px;
+    -webkit-appearance: none;
+    appearance: none;       /* remove browser default */
+}
+
+#btn {
+    background: #4CAF50;
+}
+#btn:hover {
+    background: #45a049;
+}
+
+#btn2 {
+    background: #008CBA;
+}
+#btn2:hover {
+    background: #007bb5;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .form-row {
+        flex-direction: column; /* stack on small screens */
+    }
+}
